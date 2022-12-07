@@ -1,0 +1,45 @@
+$color_red: #8A1002;
+$color_lightRed: rgba(138, 16, 2, .5);
+$color_beige: #F8EFE3;
+$color_black: #000000;
+$color_lightBlack: #191917;
+$color_white: #ffffff;
+
+$transition: 0.5s ease;
+
+@import "includes/reboot";
+@import "includes/mixin";
+@import "includes/grid";
+@import "includes/fonts";
+@import "includes/default";
+@import "includes/ui";
+
+@import "includes/header";
+@import "includes/nav";
+@import "includes/home-banner";
+@import "includes/we-print";
+@import "includes/print-all-moscow";
+@import "includes/about";
+@import "includes/services";
+@import "includes/poligraphy-people";
+@import "includes/modern-equipment";
+@import "includes/contacts";
+@import "includes/footer";
+@import "includes/breadcrumbs";
+@import "includes/main";
+@import "includes/design";
+@import "includes/portfolio";
+@import "includes/team";
+@import "includes/rules";
+@import "includes/form";
+@import "includes/modal";
+@import "includes/form-style";
+@import "includes/laser-processing";
+@import "includes/price";
+@import "includes/technical";
+@import "includes/equipments";
+@import "includes/customer";
+@import "includes/blockquote";
+@import "includes/herbarium";
+
+

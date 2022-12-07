@@ -1,0 +1,38 @@
+.blockquote {
+	padding: 50px 0;
+
+	@media (max-width: 991px) {
+		padding: 20px 0 40px;
+	}
+
+	&__text {
+		width: 50%;
+		position: relative;
+		padding-top: 80px;
+		padding-left: 100px;
+
+		@media (max-width: 991px) {
+			width: 100%;
+			padding-top: 30px;
+			padding-left: 60px;
+		}
+
+		@media (max-width: 575px) {
+			padding-left: 0;
+		}
+
+		& span {
+			display: block;
+			font-size: 14rem;
+			position: absolute;
+			opacity: .1;
+			font-family: 'PT Serif';
+			top: -40px;
+			left: 0;
+
+			@media (max-width: 575px) {
+				left: -20px;
+			}
+		}
+	}
+}

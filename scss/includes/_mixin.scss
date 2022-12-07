@@ -1,0 +1,71 @@
+@mixin flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin transition($property) {
+	-moz-transition: $property;
+	-webkit-transition: $property;
+	transition: $property;
+}
+
+@mixin align-items($property) {
+	-webkit-box-align: $property;
+	-webkit-align-items: $property;
+	-ms-flex-align: $property;
+	align-items: $property;
+}
+
+@mixin justify-content($property) {
+	-webkit-box-pack: $property;
+	-webkit-justify-content: $property;
+	-ms-flex-pack: $property;
+	justify-content: $property;
+}
+
+@mixin flex-wrap($property) {
+	-webkit-flex-wrap: $property;
+	-ms-flex-wrap: $property;
+	flex-wrap: $property;
+}
+
+@mixin flex-direction($property) {
+	-webkit-flex-direction: $property;
+	-ms-flex-direction: $property;
+	flex-direction: $property;
+}
+
+@mixin flex-grow($property) {
+	-webkit-box-flex: $property;
+	-webkit-flex-grow: $property;
+	-ms-flex-positive: $property;
+	flex-grow: $property;
+}
+
+@mixin border-radius($property) {
+	-moz-border-radius: $property;
+	-webkit-border-radius: $property;
+	border-radius: $property;
+}
+
+@mixin box-shadow($property) {
+	-moz-box-shadow: $property;
+	-webkit-box-shadow: $property;
+	-o-box-shadow: $property;
+	box-shadow: $property;
+}
+
+@mixin transform($property) {
+	-moz-transform: $property;
+	-webkit-transform: $property;
+	transform: $property;
+}
+
+@mixin order($property) {
+	-webkit-order: $property;
+	-moz-order: $property;
+	order: $property;
+}

@@ -1,0 +1,140 @@
+.equipments {
+	&__cols {
+		@include flex;
+		@include flex-wrap(wrap);
+		margin: 0 -36px;
+
+		@media (max-width: 991px) {
+			margin: 0 -18px;
+		}
+
+		@media (max-width: 575px) {
+			margin: 0 20px;
+		}
+	}
+
+	&__col {
+		width: 33.33%;
+		padding: 0 36px;
+		margin-bottom: 72px;
+
+		@media (max-width: 991px) {
+			padding: 0 18px;
+			margin-bottom: 36px;
+			width: 50%;
+		}
+
+		@media (max-width: 575px) {
+			padding: 0;
+			margin-bottom: 10px;
+			width: 100%;
+		}
+	}
+
+	&__item {
+		position: relative;
+
+		&:hover {
+			& .equipments__overlay {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__link {
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: 2;
+		}
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__overlay {
+		opacity: 0;
+		@include transition($transition);
+		background: $color_lightRed;
+		@include flex;
+		@include flex-direction(column);
+		@include align-items(center);
+		@include justify-content(center);
+		padding: 0 50px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		color: $color_white;
+		text-align: center;
+
+		@media (max-width: 991px) {
+			padding: 0 20px;
+		}
+	}
+
+	&__title {
+		font-weight: bold;
+		margin-bottom: 25px;
+
+		@media (max-width: 991px) {
+			@include flex;
+			@include flex-direction(column);
+			@include align-items(center);
+			margin-bottom: 15px;
+		}
+
+		& span {
+			@media (max-width: 991px) {
+				background: $color_white;
+				padding: 5px 30px;
+				@include border-radius(65px);
+				font-weight: normal;
+				color: $color_lightBlack;
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
+
+.equipment {
+
+	&__title {
+		@media (max-width: 991px) {
+			padding: 5px 20px;
+			@include border-radius(50px);
+			background: $color_red;
+			color: $color_white;
+			text-align: center;
+		}
+
+		&._hidden-mobile {
+			@media (max-width: 991px) {
+				display: none;
+			}
+		}
+
+		&._visible-mobile {
+			display: none;
+
+			@media (max-width: 991px) {
+				display: block;
+			}
+		}
+	}
+
+	&__button {
+		display: none;
+
+		@media (max-width: 991px) {
+			display: inline-block;
+			margin-bottom: 50px;
+		}
+	}
+}

@@ -1,0 +1,52 @@
+.technical {
+	position: relative;
+
+	& .main__cols {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__img {
+		position: absolute;
+		z-index: 1;
+		bottom: 10%;
+
+		@media (max-width: 1119px) {
+			bottom: 20%;
+		}
+
+		@media (max-width: 991px) {
+			bottom: 0;
+			opacity: .2;
+		}
+
+		&._left {
+			right: 24%;
+			width: 23%;
+
+			@media (max-width: 991px) {
+				left: 0;
+				right: unset;
+				width: 80%;
+			}
+
+			@media (max-width: 575px) {
+				width: 90%;
+				left: -100px;
+			}
+		}
+
+		&._right {
+			right: 0;
+			width: 30%;
+
+			@media (max-width: 991px) {
+				width: 60%;
+			}
+
+			@media (max-width: 575px) {
+				width: 130%;
+			}
+		}
+	}
+}

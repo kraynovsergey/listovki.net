@@ -1,0 +1,60 @@
+doctype html
+html(lang="ru")
+    head
+        - var seo = {title: 'Гербарий', description: 'Описание страницы гербарий', keywords: 'Ключи страницы гербарий'}
+        include includes/_meta.pug
+    body
+        include includes/_header.pug
+
+        include includes/_nav.pug
+
+        main.main
+            .container
+                .main__head
+                    ul.breadcrumbs._p0._visible-mobile
+                        li
+                            a(href="#") Главная
+                        li Гербарий
+
+                    h1.h1.section__title._visible-mobile Гербарий
+
+                .main__cols._jcsb
+                    .main__col._w700
+                        ul.breadcrumbs._p0._hidden-mobile
+                            li
+                                a(href="#") Главная
+                            li Гербарий
+
+                        h1.h1.section__title._hidden-mobile Гербарий
+
+                        .text
+                            p
+                                strong Почему мы завели ГЕРБАРИЙ?
+                            p Каждая служба и структура в любой стране имеет знаки отличия, гербы и другую официальную символику. Но вот сотрудники этих ведомств не знают, как эта символика правильно воспроизводится. Иногда приходится видеть вариации: у одного и того же ведомства — разная символика на документации, на сайте и на здании.
+
+                        .design__items._small._mb0._mt60
+                            .design__block
+                                a.design__item(href="#") Герб РФ
+                            .design__block
+                                a.design__item(href="#") Гербы СССР
+                            .design__block
+                                a.design__item(href="#") МЧС РФ
+                            .design__block
+                                a.design__item(href="#") ФСБ РФ
+                            .design__block
+                                a.design__item(href="#") МВД РФ
+                            .design__block
+                                a.design__item(href="#") Прокуратура РФ
+
+                    .main__col._w700._img._right
+                        picture
+                            source(type="image/webp" srcset="img/tmp/herbarium@2x.webp 2x, img/tmp/herbarium.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/herbarium@2x.jpg 2x, img/tmp/herbarium.jpg 1x")
+                            img.main__img._p0(src="img/tmp/herbarium.jpg" alt="")
+
+
+        include includes/_footer.pug
+
+        include includes/_modal.pug
+
+        include includes/_scripts.pug

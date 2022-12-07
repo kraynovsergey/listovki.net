@@ -1,0 +1,45 @@
+.modal {
+	& .modal__content {
+		max-width: 600px;
+		width: 100%;
+	}
+
+	&__close {
+		@include flex;
+		@include align-items(center);
+		@include justify-content(center);
+		width: 14px;
+		height: 14px;
+		position: absolute;
+		top: 36px;
+		right: 36px;
+
+		@media (max-width: 1199px) {
+			top: 20px;
+			right: 20px;
+			width: 10px;
+			height: 10px;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			width: 1px;
+			height: 20px;
+			background: $color_lightBlack;
+			position: absolute;
+
+			@media (max-width: 991px) {
+				height: 16px;
+			}
+		}
+
+		&::before {
+			@include transform(rotate(45deg));
+		}
+
+		&::after {
+			@include transform(rotate(-45deg));
+		}
+	}
+}

@@ -1,0 +1,43 @@
+.herbarium {
+	&__title {
+		& span {
+			@media (max-width: 991px) {
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+
+	&__item {
+		& .text {
+			@media (max-width: 991px) {
+				@include flex;
+				@include flex-direction(column);
+			}
+		}
+
+		& p {
+			&:first-child {
+				@media (max-width: 991px) {
+					text-align: center;
+					letter-spacing: 2px;
+				}
+			}
+
+			&:nth-child(2) {
+				@media (max-width: 991px) {
+					@include order(-1);
+				}
+			}
+		}
+	}
+
+	&__img {
+		@media (max-width: 991px) {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

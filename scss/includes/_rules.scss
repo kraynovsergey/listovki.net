@@ -1,0 +1,36 @@
+.rules {
+
+	&__button {
+		display: none;
+
+		@media (max-width: 1199px) {
+			display: inline-block;
+		}
+	}
+
+	&__cols {
+		@include justify-content(space-between);
+	}
+
+	&__col {
+		&._text {
+			max-width: 700px;
+			width: 50%;
+
+			@media (max-width: 1199px) {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+
+		&._form {
+			max-width: 724px;
+			width: 50%;
+			position: relative;
+
+			@media (max-width: 1199px) {
+				display: none;
+			}
+		}
+	}
+}

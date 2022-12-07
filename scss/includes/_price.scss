@@ -1,0 +1,100 @@
+.price {
+	&__title {
+		@include flex;
+		@include align-items(center);
+		font-weight: bold;
+		margin-bottom: 30px;
+
+		@media (max-width: 991px) {
+			margin-bottom: 20px;
+		}
+
+		& span {
+			color: $color_red;
+			font-size: 2.63rem;
+			line-height: 100%;
+			margin-right: 15px;
+
+			@media (max-width: 991px) {
+				font-size: 3rem;
+				margin-right: 10px;
+			}
+		}
+	}
+
+	&__text {
+		margin-bottom: 30px;
+
+		@media (max-width: 991px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__block {
+		background: $color_white;
+		padding: 65px 57px;
+		box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+
+		@media (max-width: 991px) {
+			padding: 30px;
+		}
+	}
+
+	&__box {
+		margin-bottom: 30px;
+
+		@media (max-width: 991px) {
+			margin-bottom: 25px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__name {
+		margin-bottom: 15px;
+
+		@media (max-width: 991px) {
+			margin-bottom: 13px;
+		}
+	}
+
+	&__value {
+		height: 103px;
+		line-height: 103px;
+		background: $color_red;
+		@include border-radius(51px);
+		color: $color_white;
+		padding: 0 40px;
+		width: 80%;
+
+		@media (max-width: 1199px) {
+			width: 100%;
+		}
+
+		@media (max-width: 991px) {
+			height: 50px;
+			line-height: 50px;
+			padding: 0;
+			text-align: center;
+			font-size: 1.33rem;
+		}
+
+		& span {
+			font-weight: bold;
+			font-size: 1.8rem;
+
+			@media (max-width: 991px) {
+				font-size: 2.5rem;
+			}
+		}
+	}
+
+	&__item {
+		@include flex;
+		@include flex-direction(column);
+		@include justify-content(space-between);
+		height: inherit;
+	}
+}

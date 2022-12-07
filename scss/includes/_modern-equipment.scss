@@ -1,0 +1,65 @@
+.modern-equipment {
+	&__cols {
+		@include flex;
+		@include flex-wrap(wrap);
+		margin: 0 -80px;
+
+		@media (max-width: 1400px) {
+			margin: 0;
+		}
+	}
+
+	&__col {
+		padding: 0 80px;
+		width: 50%;
+
+		@media (max-width: 1400px) {
+			padding: 0;
+			width: 100%;
+		}
+	}
+
+	&__img {
+		display: block;
+		max-width: 100%;
+		margin: 60px auto 0;
+
+		@media (max-width: 991px) {
+			margin-top: 30px;
+		}
+
+		&._hidden-mobile {
+			@media (max-width: 575px) {
+				display: none;
+			}
+		}
+
+		&._visible-mobile {
+			display: none;
+
+			@media (max-width: 575px) {
+				display: block;
+			}
+		}
+
+	}
+
+	&__title {
+		& span {
+			@media (max-width: 991px) {
+				padding-left: 110px;
+				padding-right: 110px;
+			}
+
+			@media (max-width: 575px) {
+				padding-left: 90px;
+				padding-right: 90px;
+			}
+		}
+	}
+
+	& .section__bg-title {
+		letter-spacing: 60px;
+	}
+
+}

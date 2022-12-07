@@ -1,0 +1,71 @@
+doctype html
+html(lang="ru")
+    head
+        - var seo = {title: 'Флаг и Герб РФ', description: 'Описание страницы Флаг и Герб РФ', keywords: 'Ключи страницы Флаг и Герб РФ'}
+        include includes/_meta.pug
+    body
+        include includes/_header.pug
+
+        include includes/_nav.pug
+
+        main.main.herbarium
+            .container
+                .main__head
+                    ul.breadcrumbs._p0
+                        li
+                            a(href="#") Главная
+                        li
+                            a(href="#") Гербарий
+                        li Флаг и Герб РФ
+
+                    h1.h1.section__title Гербарий
+
+                    h2.h2.section__title.herbarium__title <span>Флаг и Герб РФ</span>
+
+                .main__cols._jcsb
+                    .main__col._w700._mb60
+                        .herbarium__item
+                            .text
+                                p
+                                    strong Государственный Флаг РФ
+                                p
+                                    picture
+                                        source(type="image/webp" srcset="img/tmp/flag@2x.webp 2x, img/tmp/flag.webp 1x")
+                                        source(type="image/jpeg" srcset="img/tmp/flag@2x.jpg 2x, img/tmp/flag.jpg 1x")
+                                        img.herbarium__img(src="img/tmp/flag.jpg" alt="")
+                                p Государственный флаг Российской Федерации представляет собой прямоугольное полотнище из трех равновеликих горизонтальных полос: верхней - белого, средней - синего и нижней - красного цвета. Отношение ширины флага к его длине 2:3.
+                                p Государственный флаг Российской Федерации представляет собой прямоугольное полотнище из трех равновеликих горизонтальных полос: верхней - белого, средней - синего и нижней - красного цвета. Отношение ширины флага к его длине 2:3.
+                                p Государственный флаг Российской Федерации представляет собой прямоугольное полотнище из трех равновеликих горизонтальных полос: верхней - белого, средней - синего и нижней - красного цвета. Отношение ширины флага к его длине 2:3.
+
+                    .main__col._w700._mb60
+                        .herbarium__item
+                            .text
+                                p
+                                    strong Государственный Герб РФ
+                                p
+                                    picture
+                                        source(type="image/webp" srcset="img/tmp/gerb@2x.webp 2x, img/tmp/gerb.webp 1x")
+                                        source(type="image/png" srcset="img/tmp/gerb@2x.png 2x, img/tmp/gerb.png 1x")
+                                        img.herbarium__img(src="img/tmp/gerb.png" alt="")
+                                p Государственный герб Российской Федерации представляет собой четырехугольный, с закругленными нижними углами, заостренный в оконечности красный геральдический щит с золотым двуглавым орлом, поднявшим вверх распущенные крылья. Орел увенчан двумя малыми коронами и - над ними - одной большой короной, соединенными лентой. В правой лапе орла - скипетр, в левой - держава. На груди орла, в красном щите, - серебряный всадник в синем плаще на серебряном коне, поражающий серебряным копьем черного опрокинутого навзничь и попранного конем дракона.
+                                p Автор наиболее распространённого изображения герба Российской Федерации — народный художник Евгений Ухналёв.
+
+                .design__items._small._mb0._mt60
+                    .design__block
+                        a.design__item._active(href="#") Герб РФ
+                    .design__block
+                        a.design__item(href="#") Гербы СССР
+                    .design__block
+                        a.design__item(href="#") МЧС РФ
+                    .design__block
+                        a.design__item(href="#") ФСБ РФ
+                    .design__block
+                        a.design__item(href="#") МВД РФ
+                    .design__block
+                        a.design__item(href="#") Прокуратура РФ
+
+        include includes/_footer.pug
+
+        include includes/_modal.pug
+
+        include includes/_scripts.pug

@@ -1,0 +1,267 @@
+doctype html
+html(lang="ru")
+	head
+		- var seo = {title: 'Главная страница', description: 'Описание главной страницы', keywords: 'Ключи главной страницы'}
+		include includes/_meta.pug
+	body
+		include includes/_header.pug
+
+		include includes/_nav.pug
+
+		section.home-banner
+			.container.home-banner__cols
+				.home-banner__col
+					h1.h1.home-banner__title
+						span Типография&nbsp;
+						span Москва
+
+					.home-banner__text
+						p Ведущая типография в городе
+						p Оперативное и качественное выполнение <br>
+							span полиграфических услуг
+						p Самое современное оборудование
+
+					button.home-banner__button(type="button") о нас
+						svg(width="24" height="79" viewBox="0 0 24 79" fill="none" xmlns="http://www.w3.org/2000/svg")
+							path(d="M10.9393 78.0607C11.5251 78.6464 12.4749 78.6464 13.0607 78.0607L22.6066 68.5147C23.1924 67.9289 23.1924 66.9792 22.6066 66.3934C22.0208 65.8076 21.0711 65.8076 20.4853 66.3934L12 74.8787L3.51472 66.3934C2.92893 65.8076 1.97918 65.8076 1.3934 66.3934C0.807609 66.9792 0.807608 67.9289 1.3934 68.5147L10.9393 78.0607ZM10.5 -6.5567e-08L10.5 77L13.5 77L13.5 6.5567e-08L10.5 -6.5567e-08Z" fill="#8A1002")
+
+				.home-banner__col
+					picture
+						source(type="image/webp" srcset="img/tmp/home-banner@2x.webp 2x, img/tmp/home-banner.webp 1x")
+						source(type="image/png" srcset="img/tmp/home-banner@2x.png 2x, img/tmp/home-banner.png 1x")
+						img.home-banner__img(src="img/tmp/home-banner.png" alt="")
+
+			.home-banner__bg
+				picture
+					source(type="image/webp" srcset="img/home-banner-bg@2x.webp 2x, img/home-banner-bg.webp 1x")
+					source(type="image/png" srcset="img/home-banner-bg@2x.png 2x, img/home-banner-bg.png 1x")
+					img(src="img/home-banner-bg.png" alt="")
+				picture
+					source(type="image/webp" srcset="img/home-banner-bg@2x.webp 2x, img/home-banner-bg.webp 1x")
+					source(type="image/png" srcset="img/home-banner-bg@2x.png 2x, img/home-banner-bg.png 1x")
+					img(src="img/home-banner-bg.png" alt="")
+				picture
+					source(type="image/webp" srcset="img/home-banner-bg@2x.webp 2x, img/home-banner-bg.webp 1x")
+					source(type="image/png" srcset="img/home-banner-bg@2x.png 2x, img/home-banner-bg.png 1x")
+					img(src="img/home-banner-bg.png" alt="")
+				picture
+					source(type="image/webp" srcset="img/home-banner-bg@2x.webp 2x, img/home-banner-bg.webp 1x")
+					source(type="image/png" srcset="img/home-banner-bg@2x.png 2x, img/home-banner-bg.png 1x")
+					img(src="img/home-banner-bg.png" alt="")
+
+			.home-banner__bg-mobile
+				picture
+					source(type="image/webp" srcset="img/tmp/home-banner-mobile@2x.webp 2x, img/tmp/home-banner-mobile.webp 1x")
+					source(type="image/png" srcset="img/tmp/home-banner-mobile@2x.png 2x, img/tmp/home-banner-mobile.png 1x")
+					img(src="img/tmp/home-banner-mobile.png" alt="")
+
+		section.section.we-print
+			.container.we-print__cols
+				.we-print__col
+					ul.we-print__list
+						li
+							a(href="#") листовки
+						li
+							a(href="#") брошюры
+						li
+							a(href="#") плакаты
+						li
+							a(href="#") каталоги
+						li
+							a(href="#") журналы
+						li
+							a(href="#") календари
+						li
+							a(href="#") буклеты
+
+				.we-print__col
+					h2.h1.we-print__title.section__title
+						span Мы&nbsp;
+						| печатаем:
+
+					.we-print__items
+						.we-print__item 30.000
+							span А4 в час
+						.we-print__item 600.000
+							span А4 в сутки
+						.we-print__item 2.400.000
+							span в Москве всего почтовых ящиков
+
+					button.button.we-print__button(type="button" data-hystmodal="#modal-order")
+						span Связаться с нами
+						svg(width="329" height="86" viewBox="0 0 329 86" fill="none" xmlns="http://www.w3.org/2000/svg")
+							path(d="M327.67 43.5C327.67 45.9306 326.595 48.3445 324.466 50.7241C322.334 53.1067 319.166 55.429 315.045 57.6569C306.803 62.1123 294.844 66.1404 280.024 69.5291C250.393 76.3047 209.432 80.5 164.17 80.5C118.909 80.5 77.9482 76.3047 48.3163 69.5291C33.4964 66.1404 21.5377 62.1123 13.2961 57.6569C9.17504 55.429 6.00712 53.1067 3.8749 50.7241C1.74537 48.3445 0.67041 45.9306 0.67041 43.5C0.67041 41.0694 1.74537 38.6555 3.8749 36.2759C6.00712 33.8933 9.17504 31.571 13.2961 29.3431C21.5377 24.8877 33.4964 20.8596 48.3163 17.4709C77.9482 10.6953 118.909 6.5 164.17 6.5C209.432 6.5 250.393 10.6953 280.024 17.4709C294.844 20.8596 306.803 24.8877 315.045 29.3431C319.166 31.571 322.334 33.8933 324.466 36.2759C326.595 38.6555 327.67 41.0694 327.67 43.5Z" stroke="#8A1002")
+							path(d="M325.915 23.213C326.219 25.6534 325.455 28.2073 323.643 30.8543C321.829 33.5047 318.982 36.2215 315.181 38.9605C307.577 44.4382 296.241 49.9437 281.991 55.1596C253.501 65.5885 213.472 74.8213 168.662 80.3762C123.851 85.9311 82.7757 86.7526 52.5942 83.597C37.4995 82.0188 25.1578 79.4485 16.443 75.9937C12.0854 74.2662 8.65927 72.3271 6.2508 70.2001C3.84547 68.0758 2.47821 65.7862 2.17452 63.3459C1.87083 60.9056 2.63533 58.3517 4.44689 55.7046C6.26082 53.0542 9.1075 50.3375 12.9093 47.5985C20.5125 42.1208 31.8491 36.6152 46.0984 31.3993C74.5893 20.9704 114.618 11.7376 159.428 6.1827C204.239 0.62777 245.314 -0.193641 275.496 2.96191C290.59 4.54011 302.932 7.11036 311.647 10.5652C316.005 12.2927 319.431 14.2318 321.839 16.3588C324.244 18.4831 325.612 20.7727 325.915 23.213Z" stroke="#8A1002")
+
+			.section__bg-title.we-print__bg-title Москва
+
+		section.section.print-all-moscow
+			.print-all-moscow__text
+				div Запечатаем <span>ВСЮ МОСКВУ</span> за 4 дня
+				div Запечатаем <span>ВСЮ МОСКВУ</span> за 4 дня
+				div Запечатаем <span>ВСЮ МОСКВУ</span> за 4 дня
+				div Запечатаем <span>ВСЮ МОСКВУ</span> за 4 дня
+				div Запечатаем <span>ВСЮ МОСКВУ</span> за 4 дня
+			.print-all-moscow__text
+				div Запечатаем <span>ВСЮ МОСКВУ</span> за 4 дня
+				div Запечатаем <span>ВСЮ МОСКВУ</span> за 4 дня
+				div Запечатаем <span>ВСЮ МОСКВУ</span> за 4 дня
+				div Запечатаем <span>ВСЮ МОСКВУ</span> за 4 дня
+				div Запечатаем <span>ВСЮ МОСКВУ</span> за 4 дня
+
+		section.section.about._pt0._shadow
+			.container
+				.about__cols
+					.about__col._main-text
+						h2.h1.about__title.section__title О компании
+
+						.about__carousel
+							.about__carousel-wrap
+								.about__carousel-init
+									.about__item
+										picture
+											source(type="image/webp" srcset="img/tmp/about-1@2x.webp 2x, img/tmp/about-1.webp 1x")
+											source(type="image/jpeg" srcset="img/tmp/about-1@2x.jpg 2x, img/tmp/about-1.jpg 1x")
+											img.about__img(src="img/tmp/about-1.jpg" alt="")
+									.about__item
+										picture
+											source(type="image/webp" srcset="img/tmp/about-2@2x.webp 2x, img/tmp/about-2.webp 1x")
+											source(type="image/jpeg" srcset="img/tmp/about-2@2x.jpg 2x, img/tmp/about-2.jpg 1x")
+											img.about__img(src="img/tmp/about-2.jpg" alt="")
+								.about__arrows.arrows
+									button.about__arrow.arrows__item._prev(type="button")
+									button.about__arrow.arrows__item._next(type="button")
+							.about__dots.dots
+								button.about__dot.dots__item(type="button") 01
+								button.about__dot.dots__item(type="button") 02
+
+						.text
+							p Типография Москва  работает на российском рынке с 1996 года.
+							p Столько лет на рынке полиграфических услуг. Много это или мало? По мировым стандартам — срок весьма небольшой. Однако по календарю новой России — вполне достаточный, чтобы зарекомендовать себя и занять место среди родственных предприятий.
+							p Полный цикл печатных услуг, оснащенность современным оборудованием, новейшие технологии, современный уровень всех полиграфических процессов — все это позволяет выполнять практически любые заказы в самые короткие сроки.
+					.about__col._big-img._hidden-mobile
+						picture
+							source(type="image/webp" srcset="img/tmp/about-1@2x.webp 2x, img/tmp/about-1.webp 1x")
+							source(type="image/jpeg" srcset="img/tmp/about-1@2x.jpg 2x, img/tmp/about-1.jpg 1x")
+							img.about__img(src="img/tmp/about-1.jpg" alt="")
+					.about__col._small-img._hidden-mobile
+						picture
+							source(type="image/webp" srcset="img/tmp/about-2@2x.webp 2x, img/tmp/about-2.webp 1x")
+							source(type="image/jpeg" srcset="img/tmp/about-2@2x.jpg 2x, img/tmp/about-2.jpg 1x")
+							img.about__img(src="img/tmp/about-2.jpg" alt="")
+					.about__col._sub-text
+						.text._hidden-mobile
+							p Непременные составляющие нашей работы — культура производства, технологическая дисциплина, современные средства контроля. Важнейшая особенность Типографии Москва — стабильность качества выпускаемой продукции.
+							p Типография Москва — это коллектив высокопрофессиональных специалистов в области полиграфии.
+						a.button.about__link(href="#")
+							span Наши контакты
+							svg(width="329" height="86" viewBox="0 0 329 86" fill="none" xmlns="http://www.w3.org/2000/svg")
+								path(d="M327.67 43.5C327.67 45.9306 326.595 48.3445 324.466 50.7241C322.334 53.1067 319.166 55.429 315.045 57.6569C306.803 62.1123 294.844 66.1404 280.024 69.5291C250.393 76.3047 209.432 80.5 164.17 80.5C118.909 80.5 77.9482 76.3047 48.3163 69.5291C33.4964 66.1404 21.5377 62.1123 13.2961 57.6569C9.17504 55.429 6.00712 53.1067 3.8749 50.7241C1.74537 48.3445 0.67041 45.9306 0.67041 43.5C0.67041 41.0694 1.74537 38.6555 3.8749 36.2759C6.00712 33.8933 9.17504 31.571 13.2961 29.3431C21.5377 24.8877 33.4964 20.8596 48.3163 17.4709C77.9482 10.6953 118.909 6.5 164.17 6.5C209.432 6.5 250.393 10.6953 280.024 17.4709C294.844 20.8596 306.803 24.8877 315.045 29.3431C319.166 31.571 322.334 33.8933 324.466 36.2759C326.595 38.6555 327.67 41.0694 327.67 43.5Z" stroke="#8A1002")
+								path(d="M325.915 23.213C326.219 25.6534 325.455 28.2073 323.643 30.8543C321.829 33.5047 318.982 36.2215 315.181 38.9605C307.577 44.4382 296.241 49.9437 281.991 55.1596C253.501 65.5885 213.472 74.8213 168.662 80.3762C123.851 85.9311 82.7757 86.7526 52.5942 83.597C37.4995 82.0188 25.1578 79.4485 16.443 75.9937C12.0854 74.2662 8.65927 72.3271 6.2508 70.2001C3.84547 68.0758 2.47821 65.7862 2.17452 63.3459C1.87083 60.9056 2.63533 58.3517 4.44689 55.7046C6.26082 53.0542 9.1075 50.3375 12.9093 47.5985C20.5125 42.1208 31.8491 36.6152 46.0984 31.3993C74.5893 20.9704 114.618 11.7376 159.428 6.1827C204.239 0.62777 245.314 -0.193641 275.496 2.96191C290.59 4.54011 302.932 7.11036 311.647 10.5652C316.005 12.2927 319.431 14.2318 321.839 16.3588C324.244 18.4831 325.612 20.7727 325.915 23.213Z" stroke="#8A1002")
+
+			.section__bg-title.about__bg-title Москва
+
+		section.section.services._shadow
+			.container
+				.services__cols
+					.services__col._big
+						include includes/_services-spoiler.pug
+
+					.services__col._small
+						h2.h1.section__title.services__title Услуги
+						.text
+							p Список услуг компании достаточно разнообразен: Полиграфическая продукция в любых объемах и тиражах с превосходным уровнем исполнения. Оформление рекламной продукции. Любые виды переплетно-брошюровочных работ. Буклеты, папки, открытки, листовки, грамоты, наклейки, альбомы по искусству. Разработка и печать каталогов и календарей.
+						a.button.services__link._hidden-mobile(href="#")
+							span Посмотреть все
+							svg(width="329" height="86" viewBox="0 0 329 86" fill="none" xmlns="http://www.w3.org/2000/svg")
+								path(d="M327.67 43.5C327.67 45.9306 326.595 48.3445 324.466 50.7241C322.334 53.1067 319.166 55.429 315.045 57.6569C306.803 62.1123 294.844 66.1404 280.024 69.5291C250.393 76.3047 209.432 80.5 164.17 80.5C118.909 80.5 77.9482 76.3047 48.3163 69.5291C33.4964 66.1404 21.5377 62.1123 13.2961 57.6569C9.17504 55.429 6.00712 53.1067 3.8749 50.7241C1.74537 48.3445 0.67041 45.9306 0.67041 43.5C0.67041 41.0694 1.74537 38.6555 3.8749 36.2759C6.00712 33.8933 9.17504 31.571 13.2961 29.3431C21.5377 24.8877 33.4964 20.8596 48.3163 17.4709C77.9482 10.6953 118.909 6.5 164.17 6.5C209.432 6.5 250.393 10.6953 280.024 17.4709C294.844 20.8596 306.803 24.8877 315.045 29.3431C319.166 31.571 322.334 33.8933 324.466 36.2759C326.595 38.6555 327.67 41.0694 327.67 43.5Z" stroke="#8A1002")
+								path(d="M325.915 23.213C326.219 25.6534 325.455 28.2073 323.643 30.8543C321.829 33.5047 318.982 36.2215 315.181 38.9605C307.577 44.4382 296.241 49.9437 281.991 55.1596C253.501 65.5885 213.472 74.8213 168.662 80.3762C123.851 85.9311 82.7757 86.7526 52.5942 83.597C37.4995 82.0188 25.1578 79.4485 16.443 75.9937C12.0854 74.2662 8.65927 72.3271 6.2508 70.2001C3.84547 68.0758 2.47821 65.7862 2.17452 63.3459C1.87083 60.9056 2.63533 58.3517 4.44689 55.7046C6.26082 53.0542 9.1075 50.3375 12.9093 47.5985C20.5125 42.1208 31.8491 36.6152 46.0984 31.3993C74.5893 20.9704 114.618 11.7376 159.428 6.1827C204.239 0.62777 245.314 -0.193641 275.496 2.96191C290.59 4.54011 302.932 7.11036 311.647 10.5652C316.005 12.2927 319.431 14.2318 321.839 16.3588C324.244 18.4831 325.612 20.7727 325.915 23.213Z" stroke="#8A1002")
+
+				.services__wrap-button
+					a.button.services__link._visible-mobile(href="#")
+						span Посмотреть все
+						svg(width="329" height="86" viewBox="0 0 329 86" fill="none" xmlns="http://www.w3.org/2000/svg")
+							path(d="M327.67 43.5C327.67 45.9306 326.595 48.3445 324.466 50.7241C322.334 53.1067 319.166 55.429 315.045 57.6569C306.803 62.1123 294.844 66.1404 280.024 69.5291C250.393 76.3047 209.432 80.5 164.17 80.5C118.909 80.5 77.9482 76.3047 48.3163 69.5291C33.4964 66.1404 21.5377 62.1123 13.2961 57.6569C9.17504 55.429 6.00712 53.1067 3.8749 50.7241C1.74537 48.3445 0.67041 45.9306 0.67041 43.5C0.67041 41.0694 1.74537 38.6555 3.8749 36.2759C6.00712 33.8933 9.17504 31.571 13.2961 29.3431C21.5377 24.8877 33.4964 20.8596 48.3163 17.4709C77.9482 10.6953 118.909 6.5 164.17 6.5C209.432 6.5 250.393 10.6953 280.024 17.4709C294.844 20.8596 306.803 24.8877 315.045 29.3431C319.166 31.571 322.334 33.8933 324.466 36.2759C326.595 38.6555 327.67 41.0694 327.67 43.5Z" stroke="#8A1002")
+							path(d="M325.915 23.213C326.219 25.6534 325.455 28.2073 323.643 30.8543C321.829 33.5047 318.982 36.2215 315.181 38.9605C307.577 44.4382 296.241 49.9437 281.991 55.1596C253.501 65.5885 213.472 74.8213 168.662 80.3762C123.851 85.9311 82.7757 86.7526 52.5942 83.597C37.4995 82.0188 25.1578 79.4485 16.443 75.9937C12.0854 74.2662 8.65927 72.3271 6.2508 70.2001C3.84547 68.0758 2.47821 65.7862 2.17452 63.3459C1.87083 60.9056 2.63533 58.3517 4.44689 55.7046C6.26082 53.0542 9.1075 50.3375 12.9093 47.5985C20.5125 42.1208 31.8491 36.6152 46.0984 31.3993C74.5893 20.9704 114.618 11.7376 159.428 6.1827C204.239 0.62777 245.314 -0.193641 275.496 2.96191C290.59 4.54011 302.932 7.11036 311.647 10.5652C316.005 12.2927 319.431 14.2318 321.839 16.3588C324.244 18.4831 325.612 20.7727 325.915 23.213Z" stroke="#8A1002")
+
+			.section__bg-title.we-print__bg-title Москва
+
+		section.section.poligraphy-people._shadow
+			.container
+				.poligraphy-people__content
+					h2.h1.section__title.poligraphy-people__title <span>Полиграфию</span> <strong>— Людям!</strong>
+					.text
+						p Так выглядит наша Миссия и наш Девиз. Вот, что мы подразумеваем под этим коротким но емким словосочетанием:
+						p В нашей стране за долгие годы сложилось определенное представление о типографиях и полиграфистах. Печатник представляется многим людям как измазанный краской выпускник проф-тех училища неравнодушный к спиртному.
+						p Видимо в прошлом, в «советских» типографиях, это было нормой, поэтому Заказчики по привычке сторонятся производств. Предпочитая общаться с типографией через посредников – рекламные агентства. Этому есть еще одно объяснение: нужен переводчик с языка нормального на язык полиграфических терминов. И за этот сервис Заказчику приходится доплачивать из своего кармана.
+						p
+							a(href="#") Подробнее
+
+			picture
+				source(type="image/webp" srcset="img/poligraphy-people-1@2x.webp 2x, img/poligraphy-people-1.webp 1x")
+				source(type="image/png" srcset="img/poligraphy-people-1@2x.png 2x, img/poligraphy-people-1.png 1x")
+				img.poligraphy-people__img._left(src="img/poligraphy-people-1.png" alt="")
+
+			picture
+				source(type="image/webp" srcset="img/poligraphy-people-2@2x.webp 2x, img/poligraphy-people-2.webp 1x")
+				source(type="image/png" srcset="img/poligraphy-people-2@2x.png 2x, img/poligraphy-people-2.png 1x")
+				img.poligraphy-people__img._right(src="img/poligraphy-people-2.png" alt="")
+
+		section.section.modern-equipment._shadow
+			.container
+				.modern-equipment__cols
+					.modern-equipment__col
+						h2.h1.section__title.modern-equipment__title <span>Современное</span> <strong>оборудование</strong>
+
+					.modern-equipment__col
+						.text
+							p За время своей деятельности типография НПО «Типография Москва» собрала большой коллектив настоящих профессионалов, имеющих большой опыт по созданию различной полиграфической продукции. Наша типография в Москве постоянно расширяет свою производственную и техническую базу. Мы используем современное оборудование, которое в сочетании с профессиональными навыками наших сотрудников позволяет получать продукцию высокого качества.
+							p
+								a(href="#") Подробнее
+
+			picture
+				source(type="image/webp" srcset="img/tmp/modern-equipment@2x.webp 2x, img/tmp/modern-equipment.webp 1x")
+				source(type="image/png" srcset="img/tmp/modern-equipment@2x.png 2x, img/tmp/modern-equipment.png 1x")
+				img.modern-equipment__img._hidden-mobile(src="img/tmp/modern-equipment.png" alt="")
+
+			picture
+				source(type="image/webp" srcset="img/tmp/modern-equipment-mobile@2x.webp 2x, img/tmp/modern-equipment-mobile.webp 1x")
+				source(type="image/png" srcset="img/tmp/modern-equipment-mobile@2x.png 2x, img/tmp/modern-equipment-mobile.png 1x")
+				img.modern-equipment__img._visible-mobile(src="img/tmp/modern-equipment-mobile.png" alt="")
+
+			.section__bg-title.about__bg-title Москва
+
+		section.section.contacts
+			.container
+				.contacts__content
+					.contacts__cols
+						.contacts__col._big
+							h2.h1.section__title.contacts__title
+								strong Контакты
+							.contacts__items
+								.contacts__item
+									.contacts__name Телефон:
+									a.contacts__link(href="tel:") +7 (495) 724-724-0
+								.contacts__item
+									.contacts__name Почта:
+									a.contacts__link(href="mailto:") zakaz@Listovki.net
+								.contacts__item._full
+									.contacts__name Адрес:
+									.contacts__text 121352, г.Москва, Давыдковская улица д.3, м. Славянский бульвар
+
+						.contacts__col._small
+							picture
+								source(type="image/webp" srcset="img/tmp/contacts@2x.webp 2x, img/tmp/contacts.webp 1x")
+								source(type="image/jpeg" srcset="img/tmp/contacts@2x.jpg 2x, img/tmp/contacts.jpg 1x")
+								img.contacts__img(src="img/tmp/contacts.jpg" alt="")
+
+					picture
+						source(type="image/webp" srcset="img/contacts-bg@2x.webp 2x, img/contacts-bg.webp 1x")
+						source(type="image/png" srcset="img/contacts-bg@2x.png 2x, img/contacts-bg.png 1x")
+						img.contacts__bg(src="img/contacts-bg.jpg" alt="")
+
+		include includes/_footer.pug
+
+		include includes/_modal.pug
+
+		include includes/_scripts.pug

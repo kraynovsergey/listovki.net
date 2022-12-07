@@ -1,0 +1,62 @@
+.print-all-moscow {
+	position: relative;
+	padding: 80px 0 120px;
+
+	@media (max-width: 1199px) {
+		padding: 70px 0 60px;
+	}
+
+	@media (max-width: 991px) {
+		margin-top: -70px;
+		padding: 90px 0 50px;
+	}
+
+	&__text {
+		padding: 16px 16px 16px 30px;
+		background: $color_red;
+		color: $color_beige;
+		white-space: nowrap;
+		overflow: hidden;
+		font-family: 'PT Serif';
+		@include flex;
+		@include align-items(center);
+		margin-left: -30px;
+		position: relative;
+		width: 110%;
+
+		@media (max-width: 991px) {
+			padding: 5px 5px 5px 30px;
+		}
+
+		&:first-child {
+			@include transform(rotate(4.6deg));
+
+			@media (max-width: 575px) {
+				@include transform(rotate(7.6deg));
+			}
+		}
+
+		&:last-child {
+			@include transform(rotate(-4.6deg));
+			top: -60px;
+
+			@media (max-width: 991px) {
+				top: -34px;
+			}
+
+			@media (max-width: 575px) {
+				@include transform(rotate(-6.6deg));
+				top: -25px;
+			}
+		}
+
+		& div {
+			margin-right: 20px;
+		}
+
+		& span {
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+}

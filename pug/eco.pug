@@ -1,0 +1,95 @@
+doctype html
+html(lang="ru")
+    head
+        - var seo = {title: 'Эко-печать', description: 'Описание страницы эко-печать', keywords: 'Ключи страницы эко-печать'}
+        include includes/_meta.pug
+    body
+        include includes/_header.pug
+
+        include includes/_nav.pug
+
+        main.main._shadow
+            .container
+                .main__head
+                    ul.breadcrumbs._p0._visible-mobile
+                        li
+                            a(href="#") Главная
+                        li Эко-печать
+
+                    h1.h1.section__title._visible-mobile <span>Что такое</span> <strong>эко-печать</strong>
+
+                .main__cols
+                    .main__col
+                        ul.breadcrumbs._p0._hidden-mobile
+                            li
+                                a(href="#") Главная
+                            li Эко-печать
+
+                        .h1.section__title._hidden-mobile <span>Что такое</span> <strong>эко-печать</strong>
+
+                        .text
+                            p Полиграфическая деятельность не подлежит обязательной сертификации.Но каждый уважающий потребителя производитель должен всегда помнить о качестве и безопасности продукции, особенно при заказе полиграфии для пищевых продуктов, детских  медицинских учреждений.
+                            p
+                                strong Почему это выгодно для Вас:
+                            ul
+                                li вы производите продукцию для детей?
+                                li у Вас ресторан или кафе?
+                                li Ваша деятельность связана с медициной?
+                                li Вы реализуете пищевые продукты?
+                                li Вы думаете о здоровье людей?
+                            p В таком случае наши интересы совпадают! Мы единственная типография в Москве, прошедшая Эко-контроль!
+
+                    .main__col._img
+                        picture
+                            source(type="image/webp" srcset="img/tmp/eco@2x.webp 2x, img/tmp/eco.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/eco@2x.jpg 2x, img/tmp/eco.jpg 1x")
+                            img.main__img._p0(src="img/tmp/eco.jpg" alt="")
+
+        section.section.team
+            .container
+                h2.h2.team__title._visible Санитарно-эпидемиологические заключения
+
+                .team__content
+                    .team__wrap
+                        .team__carousel
+                            .team__init
+                                .team__slide
+                                    .team__item
+                                        a.team__link(href="img/tmp/sanpin.jpg" data-fslightbox="sanpin")
+                                            picture
+                                                source(type="image/webp" srcset="img/tmp/sanpin@2x.webp 2x, img/tmp/sanpin.webp 1x")
+                                                source(type="image/jpeg" srcset="img/tmp/sanpin@2x.jpg 2x, img/tmp/sanpin.jpg 1x")
+                                                img.team__img._noradius(src="img/tmp/sanpin.jpg" alt="")
+                                        .team__caption Санитарно-эпидемиологическое заключение на вид деятельности
+                                .team__slide
+                                    .team__item
+                                        a.team__link(href="img/tmp/sanpin.jpg" data-fslightbox="sanpin")
+                                            picture
+                                                source(type="image/webp" srcset="img/tmp/sanpin@2x.webp 2x, img/tmp/sanpin.webp 1x")
+                                                source(type="image/jpeg" srcset="img/tmp/sanpin@2x.jpg 2x, img/tmp/sanpin.jpg 1x")
+                                                img.team__img._noradius(src="img/tmp/sanpin.jpg" alt="")
+                                        .team__caption Санитарно-эпидемиологическое заключение на вид деятельности
+                                .team__slide
+                                    .team__item
+                                        a.team__link(href="img/tmp/sanpin.jpg" data-fslightbox="sanpin")
+                                            picture
+                                                source(type="image/webp" srcset="img/tmp/sanpin@2x.webp 2x, img/tmp/sanpin.webp 1x")
+                                                source(type="image/jpeg" srcset="img/tmp/sanpin@2x.jpg 2x, img/tmp/sanpin.jpg 1x")
+                                                img.team__img._noradius(src="img/tmp/sanpin.jpg" alt="")
+                                        .team__caption Санитарно-эпидемиологическое заключение на вид деятельности
+
+                    .team__arrows.arrows
+                        button.team__arrow.arrows__item._prev(type="button")
+                        button.team__arrow.arrows__item._next(type="button")
+
+                .team__dots.dots
+                    button.team__dot.dots__item(type="button") 01
+                    button.team__dot.dots__item(type="button") 02
+                    button.team__dot.dots__item(type="button") 03
+
+
+        include includes/_footer.pug
+
+        include includes/_modal.pug
+
+        include includes/_scripts.pug

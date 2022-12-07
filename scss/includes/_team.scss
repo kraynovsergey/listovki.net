@@ -1,0 +1,154 @@
+.team {
+	&__title {
+		text-align: center;
+
+		@media (max-width: 991px) {
+			display: none;
+		}
+
+		&._visible {
+			display: block !important;
+		}
+	}
+
+	&__content {
+		position: relative;
+		max-width: 1420px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 157px;
+		overflow: hidden;
+
+		@media (max-width: 1199px) {
+			padding: 0 100px;
+		}
+
+		@media (max-width: 991px) {
+			padding: 0;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		top: calc(50% - 30px);
+
+		@media (max-width: 991px) {
+			top: calc(50% - 10px);
+		}
+
+		&._prev {
+			left: 15px;
+		}
+
+		&._next {
+			right: 15px;
+		}
+	}
+
+	&__carousel {
+		max-width: 35%;
+		width: 100%;
+		margin: 0 auto;
+
+		@media (max-width: 991px) {
+			max-width: 54%;
+		}
+
+		& .tns-ovh {
+			overflow: visible;
+
+			@media (max-width: 991px) {
+				overflow: hidden;
+			}
+		}
+	}
+
+	&__wrap {
+		overflow: hidden;
+	}
+
+	&__slide {
+		& .team__item {
+			@include transition($transition);
+			@include transform(scale(.6));
+			opacity: .5;
+
+			@media (max-width: 991px) {
+				@include transform(scale(1));
+			}
+		}
+
+		&.tns-slide-active {
+			& .team__item {
+				@include transform(scale(1));
+				opacity: 1;
+
+				& .team__overlay {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__item {
+		position: relative;
+		color: $color_white;
+		cursor: pointer;
+	}
+
+	&__img {
+		@include border-radius(50%);
+		max-width: 100%;
+		width: 100%;
+
+		&._noradius {
+			@include border-radius(0);
+		}
+	}
+
+	&__overlay {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: $color_lightRed;
+		@include flex;
+		@include align-items(center);
+		@include justify-content(center);
+		@include flex-direction(column);
+		@include border-radius(50%);
+		@include transition($transition);
+		opacity: 0;
+		padding: 30px;
+
+		@media (max-width: 991px) {
+			padding: 15px;
+		}
+	}
+
+	&__position {
+		font-weight: bold;
+		margin-bottom: 25px;
+		text-align: center;
+
+		@media (max-width: 991px) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__name {
+		text-align: center;
+	}
+
+	&__caption {
+		font-size: .63rem;
+		margin-top: 20px;
+		text-align: center;
+		color: $color_lightBlack;
+	}
+
+	&__link {
+		display: block;
+	}
+}
